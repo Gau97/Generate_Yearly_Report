@@ -1,4 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Navigate_To_WorkItemsPage" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1497,812" sap2010:WorkflowViewState.IdRef="Navigate_To_WorkItemsPage_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Navigate_To_WorkItemsPage" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_WorkItemsURL" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1141,812</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Navigate_To_WorkItemsPage_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -75,7 +83,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Navigate_To_WorkItemsPage" sap:VirtualizedContainerService.HintSize="416,399" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Navigate_To_WorkItemsPage" sap:VirtualizedContainerService.HintSize="512,732" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="bool_WorkItemsLoaded" />
     </Sequence.Variables>
@@ -84,7 +92,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'ACME'" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="32958b4ee87887d8de39eff70ecd85b5" Selector="&lt;html app='chrome.exe' title='*ACME*' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'ACME'" sap:VirtualizedContainerService.HintSize="450,390" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="32958b4ee87887d8de39eff70ecd85b5" Selector="&lt;html app='chrome.exe' title='*ACME*' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -96,18 +104,18 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To - Work Items Page" sap:VirtualizedContainerService.HintSize="354,83" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="https://acme-test.uipath.com/work-items" />
+            <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To - Work Items Page" sap:VirtualizedContainerService.HintSize="354,83" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[in_WorkItemsURL]" />
           </Sequence>
         </ActivityAction>
       </ui:BrowserScope.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:BrowserScope>
-    <ui:UiElementExists DisplayName="Element Exists 'Work Items" Exists="[bool_WorkItemsLoaded]" sap:VirtualizedContainerService.HintSize="354,139" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+    <ui:UiElementExists DisplayName="Element Exists 'Work Items" Exists="[bool_WorkItemsLoaded]" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
       <ui:UiElementExists.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="01f1dd15-5998-46b3-9c52-300c33472bb5" InformativeScreenshot="55aae65b4a63b2d730034fce88780f8d" Selector="&lt;html app='chrome.exe' title='ACME*Work Items' /&gt;&lt;webctrl tag='H1' /&gt;">
           <ui:Target.TimeoutMS>
@@ -119,6 +127,6 @@
         </ui:Target>
       </ui:UiElementExists.Target>
     </ui:UiElementExists>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,115" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Work Items Page Loaded - &quot; +bool_WorkItemsLoaded.ToString]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,115" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Work Items Page Loaded - &quot; +bool_WorkItemsLoaded.ToString]" />
   </Sequence>
 </Activity>
