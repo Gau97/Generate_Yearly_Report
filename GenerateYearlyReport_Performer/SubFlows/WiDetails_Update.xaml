@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>751.2,1632</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>751.2,1780</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>WiDetails_Update_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -89,13 +89,13 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="WiDetails_Update" sap:VirtualizedContainerService.HintSize="592,1567.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="WiDetails_Update" sap:VirtualizedContainerService.HintSize="592,1715.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Navigate to WI Details Window" sap:VirtualizedContainerService.HintSize="529.6,504.8" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="2f2941cfc6071e2e6ed6cfe69930c002" Selector="&lt;html app='chrome.exe' title='*ACME*' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Navigate to WI Details Window" sap:VirtualizedContainerService.HintSize="529.6,464.8" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="2f2941cfc6071e2e6ed6cfe69930c002" Selector="&lt;html app='chrome.exe' title='*ACME*' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -195,6 +195,28 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:BrowserScope>
+    <ui:ClickImage DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click Image 'chrome.exe ACME'" sap:VirtualizedContainerService.HintSize="529.6,188" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:ClickImage.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:ClickImage.CursorPosition>
+      <ui:ClickImage.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.4" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGYAAABMCAYAAACf6MIyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAArrSURBVHhe7ZzrV1TXGcb7yf/AT/kg3hUjIioCKoIKiBhRIyjRiAERgqKAUCIieEEhgIJcoqMiKAiCRs1FsSEmMUJiUrNyaZNe1rKpzapt01WTpmls++Xtefaw9+wZNmdmgGHOyPnwW8p75sx59/PMOWfffzZu3DgyMR6mMQbFNMagmMYYFNMYg2IaY1BMYwyKaYxBMY0xKKYxBmXEjfGfOZvWPp9NmXtPUP7LnXTw5C061v45Wa5/Qxc//J8hQC5H2z5juSHHjJfqaPXGLJo+Y5ayTJ7A48b4jR9P4VFraGveMaps/YTaP/ivUgxfoK33P1oZ7lHq7ipauHQVK5uqzMOBR42JT9pOJ17/WllIcPrmQ6q++AUdOPk25ZdfpPSCWlZob4IckAvuFuSGHFW5g/qrv6e4hG3Ksg8VjxgTEh5DFS2/7FeQM7/4K+WVtVPss6k0cdJk5blGZNLkqSxnGNb41t/6levI2R6avyhaee5gGVZjZgYGs+QdE88+dI4iYtYpz/FFImMTKfdwa79y5pd3aBrMU57jLsNmDIQ/9853Ism2nsfai7ODZs0J7ffZWUHzKWFLDmXvt9D+utfoeNtH1Hzzj3T148eGALkgJ+SGHJErcnYsx+x5C1nlAO8eXu7mW/+gRcvi+33WXYbFmJXrM+hCz08sMbzcC49doznzF9t9ZnFUPGXtraeGS58pxfAFkPuOwjoKX7bKrmxzQyNpb83romLT+v6P7NEnf8ZdhmxM8s4jugmFLV5OlU23lQX1ZUpP3KBFS1balRVlhwb8B7oxo8TuuDsMyZgXC19hSYDmdx6xajE/NjcknPbXXqMrH/2kLNiTAMpWXHNFK6vt6RCxfB3TguuSrrWB+DF3GLQxazfniIujSjwnJEIci9+QTh13HikL8ySCssbEbxLlhxYn33wg9Fm3JU8cc5VBGbM0LklcFAnINZHNmcVP9F0yEJc//JGVneuAGqpszpIV68UxV3DbGLzU+a3acvsH7cW3RBzLLjmpTHo0AQ24HmjPQSNodbb77xQ4d4E45gy3jJky1V97bP2BXQgvt5g1W8Sx7YW1ykRHI9CC6xK7NkVUjuqv/I5pyI/p4ZYxOaUt7AIAtTEefyYxTZngaGZ1UobQ54Xsl4Vuuw40ibgeLhsTpD3C0GjEl1ec/1jEUafvuPOdMrnRDDRBU4HrdLTtU6YdNHTlkeayMWhAcddD+y6I1nDL239WJmbymJq6vhY9BuFRq4V+e7QGuKytCpeMCV0ca/vSo1dF/GDDm8qETGxAI66X/ONeEBkn4ipcMqa8+S77MnS78KpxyKIoZSIm9qDpwB9pgXPCRNdVWdMHdho74tQYVIe5yxl76kXcvFtcR75rtu+zCD3Rx8bjjjg1ZlPmAfFFAbOtz8vImDXKBEzUyHcNNOR66vWlOTWm9NR77EtqL38lYmabxX3ktk2d1p6Bpocst0TMEV1jMHLHq8i4BXnccu0r5cVNBqa+81Oh347i00xT9ERPmDhJxGV0jUE3Nr4ALHtmI4sFh0UqL2yiDx5nvOIUtep5oavceyKjawwmJzg6i4461YVNnJO0tYBpCC35uE1KToWd5hxdY3IOnWcnV3f8SsQKK9uVFx0ZHlJFtYWi4nbT2IBdNEbDb3UVZbY87PfZilwcL6W8binee5cSIrV4UDnl3ZDiIwS04zpCU2g7UBeNrjH76m6wk0tP3xaxslPdyot6nN57lBxnNWPswv20IreR0rLKyX++NeafdZdapc/3N+YB5SUhVkDJ7d4ZK4J2XMcjjXeYtkW1tqq0jK4xmNyGkzGGz2N4iaku6lkeUWmW1YCI6vsOxx5qxwrYsRWWb0Xc3phH2t/Wz0RUPxCfGWnkCkDR8TeYtnK/o4yuMXygB9OPeOz8W98oL+pRursoTBN1zOZuu7tCgEdUkHY8rpMsfTHZGEt1OXv0+efeow75vBEG2nEdeU89Rn95TEbXGJwI0vKrRexS7z+VF/UkHWcb+t0R9vxA1juqikres8a4MZnaO8lfO/epzV3CNG8B7biOmPEJbVtu/0vEZHSNwagbTka9m8e8ccc0VZcyY5Lb1ceB4zvF+ncBBbL3UgEltHh/DoJ8x/C2DDTmMRldY2ov/4adLHdTe+Md02qpYsY4v2MaqLTXGhNGtXdRBB5zXqqJycjvGGgKbeUeFRldYzAnFyejBsFjXqmV3eikeZoxY7N61O+I3h6Kh/hJXdTUF5PvoI526+NsTLSFKvqM8wZyZ2bZ2V6m7eEz74uYjK4x3NXjl74UMe+0Y76lklQIra6VlfTVyuLP2h5Xjo82XgEYq5nnrXdN/uFmoWPdq7+1Po2k8S0ZXWOySs6wkzHDncfQelVd1OOgHRNtNeep6HKKL7BvxwQW2Ne4HI2Rq8zeqp3xlj/AHGdou2PfKRGT0TUGE9VwMuD9PPjXe/PGtDbL4SoKi97NBB4TsJv8E9xp+dvMHen2DOsrmzWXaYgBM64rVtfJmnN0jcGyPP4FG9L2irh3Gpm+Tc2Fu0K/jS+WCF2hMY/L6BoDajp+zb4Aq754zByPcZ/0vEqh36FT7zJNsfaUxxxxagyfOH7hzr/Z+AximLKkurjJwPClGxMnTRFjXFh0K2st49QYeZ7yime3irg55u86cjUZa4m4npHLE0TcEafGjJ8wgc69+z37IrnOHRoezSZSqxIxsQGNQhYuE7qh0xJaQlO9Vc9OjQGo0nGX5RE3747N+AZy20UeEcY+BzyuwiVjpvkHiBn+mBjt5+fH4kHzFlBnz/fKhEweM21m9NW6cHdg+Tk0RP+Ys8nlLhkDkrMOC7cTU20NpbWbdiiTMnnMtOE6bUgrFPq5sgTQZWMmTJhIlut/Yl+MVitW7PJjKbtKlYmNZqAJ1wcT8vmKboy/QEt+bCBcNgZgPxXuOvp6pkybIY6Zi5ZsyIuX8Mh65bX7QreVienimB5uGQMKql4VF8FkQP6+wb9bc8q82F3jfVD2bXkVNk209wpqslwv7Hsga6mH28bgNuTDAUCeCAhWrksZVQtjOVgPE7sm2U4L3gkM0Np3Z1Mgt40BU6c/zQZ4+EVTc6vsjmOerpF2uvA0jdfvs3adrAGfkwcwVWnKNNeW+HEGZQzA5Ghs2sMvjpk08sY92NsLu0h4Y47ASIGyZRU1aGUNEOWGBsV9074Adm+aMTNIHHeVQRsD0H3N6+YAm6859pYGBS9ke7KoCubLHKx/Q6uZhtmVFUMi0IDrgaF5aCR/xlWGZAxArYP3lgLsjhcsdUFw0ImHO8iX95Kp6/iEtu853m8vGYDlj2du/kXoAE0mT53e73OuMmRjAF5qcrcNeqKzDzaL9TSO+OLuS08HzFGWBWXEVGK+UgxsLzrp1otexbAYw8E2Jhfu2BLExOmd+xvF6OeTBMqEecf4EfLy4v/xz9la+0NhWI0B2DkDEwz4pgMsYe3XhFs7aVvRgHeRL4Dcn8soZu03+QeI/crQvpN7Q4bKsBvDCV6w1G6VrgxG7jATMTH1JTbGg40/B/uS9ATIBZvBIbf1W/ewAS0+O98RlFFvLeVg8ZgxHOzwt2VnGdv4U1UwXwQ1L+wMotq9cLjwuDEyQcHhlJJTSTWdXyoLbGRwx2DrEXc26hkKI2qMI7ODF7FHBgaQElJ+Tlt2ldtttesNkEPCC/ksJ+Q2nO8Nd/CqMSYDYxpjUExjDIppjEExjTEopjEGxTTGoJjGGJJx9H9fS9SpM3IA4QAAAABJRU5ErkJggg==" />
+      </ui:ClickImage.Image>
+      <ui:ClickImage.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7af25013-a09b-4fff-9ec5-dd87bf0801e7" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Download Monthly Report - Google Chrome' /&gt;" WaitForReady="INTERACTIVE">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+        </ui:Target>
+      </ui:ClickImage.Target>
+    </ui:ClickImage>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="529.6,116" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Work Details Updated&quot;]" />
   </Sequence>
 </Activity>
