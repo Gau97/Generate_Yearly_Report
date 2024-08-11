@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1141,1369</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>751.2,1379.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -102,7 +102,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="541,1304" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="539.2,1314.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="bool_isPageActive" />
     </Sequence.Variables>
@@ -112,9 +112,9 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="479,124" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
-    <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="479,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
-    <ui:UiElementExists DisplayName="Element Exists - Page Active" Exists="[bool_isPageActive]" sap:VirtualizedContainerService.HintSize="479,139" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="476.8,124.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
+    <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="476.8,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
+    <ui:UiElementExists DisplayName="Element Exists - Page Active" Exists="[bool_isPageActive]" sap:VirtualizedContainerService.HintSize="476.8,139.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
       <ui:UiElementExists.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d8142026-ff85-4da6-a779-ca71a40352e6" InformativeScreenshot="f54a9f6de5e50aaf3ee9de7df40fde74" Selector="[string.Format(&quot;&lt;html app='chrome.exe' title='ACME System 1 - Work Items' /&gt;&lt;webctrl tag='A' class='page-numbers current' innertext='{0}' /&gt;&quot;, in_TransactionItem)]">
           <ui:Target.TimeoutMS>
@@ -126,9 +126,9 @@
         </ui:Target>
       </ui:UiElementExists.Target>
     </ui:UiElementExists>
-    <If Condition="[bool_isPageActive]" sap:VirtualizedContainerService.HintSize="479,778" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[bool_isPageActive]" sap:VirtualizedContainerService.HintSize="476.8,781.6" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="445,514" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="443.2,516.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="sd:DataTable" Name="dt_WrkItems" />
             <Variable x:TypeArguments="sd:DataTable" Name="dt_FilteredWrkItems" />
@@ -138,14 +138,14 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SubFlows\ExtractData_WorkItemsPage.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="383,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="SubFlows\ExtractData_WorkItemsPage.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SubFlows\ExtractData_WorkItemsPage.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="380.8,145.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="SubFlows\ExtractData_WorkItemsPage.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="sd:DataTable" x:Key="out_dtWorkItems">
-                <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dt_WrkItems" />
-              </InArgument>
+              <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtWorkItems">
+                <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_WrkItems" />
+              </OutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SubFlows\Filter_Data_workItems.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="383,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="SubFlows\Filter_Data_workItems.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SubFlows\Filter_Data_workItems.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="380.8,145.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="SubFlows\Filter_Data_workItems.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtWorkItems">
                 <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dt_WrkItems" />
@@ -161,14 +161,10 @@
               </InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Framework\Wi4Queue.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="383,136" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\Wi4Queue.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Framework\Wi4Queue.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="380.8,136.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\Wi4Queue.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtWI4Items">
-                <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dt_FilteredWrkItems" />
-              </InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_Queuename">
-                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;OrchestratorQueueName&quot;).ToString" />
-              </InArgument>
+              <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtWI4Items">[dt_FilteredWrkItems]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Queuename">[in_Config("OrchestratorQueueName").ToString]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </Sequence>

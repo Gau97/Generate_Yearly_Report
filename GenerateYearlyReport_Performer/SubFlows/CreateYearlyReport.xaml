@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CreateYearlyReport" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CreateYearlyReport" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_TaxID" Type="InArgument(x:String)" />
     <x:Property Name="in_Year" Type="InArgument(x:String)" />
@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>776,3526.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>775.2,4386.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CreateYearlyReport_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -48,6 +48,9 @@
       <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>UiPath.Excel</x:String>
       <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -108,9 +111,11 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CreateYearlyReport" sap:VirtualizedContainerService.HintSize="786.4,3461.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CreateYearlyReport" sap:VirtualizedContainerService.HintSize="785.6,4321.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Default="[new DataTable()]" Name="dt_YearlyReport" />
       <Variable x:TypeArguments="s:String[]" Name="Months" />
@@ -120,7 +125,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into - 'vendorTaxID'" EmptyField="True" sap:VirtualizedContainerService.HintSize="724,167.2" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[in_TaxID]">
+    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into - 'vendorTaxID'" EmptyField="True" sap:VirtualizedContainerService.HintSize="723.2,167.2" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[in_TaxID]">
       <ui:TypeInto.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fc667312-3caa-49aa-8e8f-4e9e28c3488b" InformativeScreenshot="c2d26c913373566aff50b11fcb584b1d" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Download Monthly Report' /&gt;&lt;webctrl id='vendorTaxID' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE">
           <ui:Target.TimeoutMS>
@@ -129,7 +134,7 @@
         </ui:Target>
       </ui:TypeInto.Target>
     </ui:TypeInto>
-    <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Items="{x:Null}" DisplayName="Select Item - Report Year" sap:VirtualizedContainerService.HintSize="724,146.4" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="[in_Year]">
+    <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Items="{x:Null}" DisplayName="Select Item - Report Year" sap:VirtualizedContainerService.HintSize="723.2,146.4" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="[in_Year]">
       <ui:SelectItem.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="278bf653-7e91-4479-804e-eb2955194c0d" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Download Monthly Report' /&gt;&lt;webctrl id='reportYear' tag='SELECT' name='reportYear' /&gt;" WaitForReady="INTERACTIVE">
           <ui:Target.TimeoutMS>
@@ -138,7 +143,7 @@
         </ui:Target>
       </ui:SelectItem.Target>
     </ui:SelectItem>
-    <Assign DisplayName="Assign - Initiate 12 Month Names" sap:VirtualizedContainerService.HintSize="724,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign DisplayName="Assign - Initiate 12 Month Names" sap:VirtualizedContainerService.HintSize="723.2,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="s:String[]">[Months]</OutArgument>
       </Assign.To>
@@ -146,13 +151,13 @@
         <InArgument x:TypeArguments="s:String[]">[{"January","February","March","April","May","June","July","August","September","October","November","December"}]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="724,2528" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[Months]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="723.2,2721.6" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[Months]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="month" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="688,2370.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="688,2564" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="NoDataFoundDialog" />
             </Sequence.Variables>
@@ -191,14 +196,14 @@
             </ui:Click>
             <ui:UiElementExists DisplayName="Element Exists - No corresponding Data in the Month" Exists="[NoDataFoundDialog]" sap:VirtualizedContainerService.HintSize="625.6,139.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
               <ui:UiElementExists.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1a5871f4-d5ff-4444-a9ed-180505bf7e7c" InformativeScreenshot="697340f5b3b53a63a9e397a55eb5a124" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Download Monthly Report - Google Chrome' /&gt;&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl role='pane' /&gt;" WaitForReady="INTERACTIVE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1a5871f4-d5ff-4444-a9ed-180505bf7e7c" InformativeScreenshot="697340f5b3b53a63a9e397a55eb5a124" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*ACME*' /&gt;&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;" WaitForReady="INTERACTIVE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
                 </ui:Target>
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
-            <If Condition="[NoDataFoundDialog]" sap:VirtualizedContainerService.HintSize="625.6,1836" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[NoDataFoundDialog]" sap:VirtualizedContainerService.HintSize="625.6,2029.6" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -206,13 +211,35 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,219.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,407.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  OK'" sap:VirtualizedContainerService.HintSize="353.6,130.4" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:ClickImage DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click Image 'chrome.exe ACME'" sap:VirtualizedContainerService.HintSize="353.6,188" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:ClickImage.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:ClickImage.CursorPosition>
+                    <ui:ClickImage.Image>
+                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.4" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="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" />
+                    </ui:ClickImage.Image>
+                    <ui:ClickImage.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7af25013-a09b-4fff-9ec5-dd87bf0801e7" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Download Monthly Report - Google Chrome' /&gt;" WaitForReady="INTERACTIVE">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                      </ui:Target>
+                    </ui:ClickImage.Target>
+                  </ui:ClickImage>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'push button  OK'" sap:VirtualizedContainerService.HintSize="353.6,130.4" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
                     <ui:Click.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -224,20 +251,17 @@
                       </ui:CursorPosition>
                     </ui:Click.CursorPosition>
                     <ui:Click.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2028ef62-294c-4543-8836-5fa8af184d02" InformativeScreenshot="de9d46ae53dfdc222ab029b46b3ae2ca" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Download Monthly Report - Google Chrome' /&gt;&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;">
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2028ef62-294c-4543-8836-5fa8af184d02" InformativeScreenshot="de9d46ae53dfdc222ab029b46b3ae2ca" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*ACME*' /&gt;&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" WaitForReady="INTERACTIVE">
                         <ui:Target.TimeoutMS>
                           <InArgument x:TypeArguments="x:Int32" />
                         </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
                       </ui:Target>
                     </ui:Click.Target>
                   </ui:Click>
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="592,1455.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="592,1460.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="Bool_DownloadPop" />
                     <Variable x:TypeArguments="x:String" Name="ReportPath" />
@@ -253,7 +277,7 @@
                       <OutArgument x:TypeArguments="x:String">[ReportPath]</OutArgument>
                     </Assign.To>
                     <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">[path.combine(Environment.CurrentDirectory,in_ReportDownloadPath,"Report-" + in_TaxID+"-"+ in_Year+"-"+month.ToString+".csv")]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[in_ReportDownloadPath + "Report-" + in_TaxID+"-"+ in_Year+"-"+month.ToString+".csv"]</InArgument>
                     </Assign.Value>
                   </Assign>
                   <ui:UiElementExists DisplayName="Element Exists - Download Pop up" Exists="[Bool_DownloadPop]" sap:VirtualizedContainerService.HintSize="529.6,139.2" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
@@ -265,7 +289,7 @@
                       </ui:Target>
                     </ui:UiElementExists.Target>
                   </ui:UiElementExists>
-                  <If Condition="[Bool_DownloadPop]" sap:VirtualizedContainerService.HintSize="529.6,1113.6" sap2010:WorkflowViewState.IdRef="If_2">
+                  <If Condition="[Bool_DownloadPop]" sap:VirtualizedContainerService.HintSize="529.6,1119.2" sap2010:WorkflowViewState.IdRef="If_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -273,7 +297,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,848.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,852.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="sd:DataTable" Name="dt_MonthlyReport" />
                         </Sequence.Variables>
@@ -294,7 +318,7 @@
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="433.6,139.2" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                           <ui:Click.CursorPosition>
                             <ui:CursorPosition Position="Center">
                               <ui:CursorPosition.OffsetX>
@@ -316,13 +340,13 @@
                             </ui:Target>
                           </ui:Click.Target>
                         </ui:Click>
-                        <ui:ReadCsvFile DataTable="[dt_MonthlyReport]" Delimitator="Comma" DisplayName="Read CSV" FilePath="[ReportPath]" sap:VirtualizedContainerService.HintSize="434,186" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
-                        <ui:MergeDataTable Destination="[dt_YearlyReport]" DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="434,165" sap2010:WorkflowViewState.IdRef="MergeDataTable_1" MissingSchemaAction="Add" Source="[dt_MonthlyReport]" />
-                        <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="434,103" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[ReportPath]" />
+                        <ui:ReadCsvFile DataTable="[dt_MonthlyReport]" Delimitator="Comma" DisplayName="Read CSV" FilePath="[ReportPath]" sap:VirtualizedContainerService.HintSize="433.6,187.2" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
+                        <ui:MergeDataTable Destination="[dt_YearlyReport]" DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="433.6,166.4" sap2010:WorkflowViewState.IdRef="MergeDataTable_1" MissingSchemaAction="Add" Source="[dt_MonthlyReport]" />
+                        <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="433.6,104" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[ReportPath]" />
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -344,8 +368,45 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <ui:CreateFile Output="{x:Null}" ContinueOnError="True" DisplayName="Create File" sap:VirtualizedContainerService.HintSize="724,165" sap2010:WorkflowViewState.IdRef="CreateFile_1" Name="[&quot;Yearly-Report-&quot; + in_Year.ToString() + &quot;-&quot; + in_TaxID + &quot;.xlsx&quot;]" Path="Data\Output" />
-    <Assign sap:VirtualizedContainerService.HintSize="724,114" sap2010:WorkflowViewState.IdRef="Assign_4">
+    <ueab:ExcelProcessScopeX ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayAlerts="False" DisplayName="Excel Process Scope - Create Excel File" sap:VirtualizedContainerService.HintSize="723.2,56.8" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,509.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="449.6,420.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" UseTemplate="True" WorkbookPath="[&quot;Data\Output\Yearly-Report-&quot; + in_Year.ToString() + &quot;-&quot; + in_TaxID+&quot;.xlsx&quot;]">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ueab:ExcelProcessScopeX>
+    <Assign sap:VirtualizedContainerService.HintSize="723.2,113.6" sap2010:WorkflowViewState.IdRef="Assign_4">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[out_YearlyReportPath]</OutArgument>
       </Assign.To>
@@ -353,6 +414,45 @@
         <InArgument x:TypeArguments="x:String">["E:\UiPath\Generate_Yearly_Report\GenerateYearlyReport_Performer\Data\Output\"+ "Yearly-Report-" + in_Year.ToString() + "-" + in_TaxID + ".xlsx"]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:WriteRange AddHeaders="True" DataTable="[dt_YearlyReport]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="724,139" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[in_TaxID +&quot;_&quot; + in_Year.ToString]" StartingCell="A1" WorkbookPath="[out_YearlyReportPath]" />
+    <ui:WriteRange AddHeaders="True" DataTable="[dt_YearlyReport]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="723.2,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" StartingCell="A1" WorkbookPath="[out_YearlyReportPath]" />
+    <ueab:ExcelProcessScopeX ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayAlerts="False" DisplayName="Excel Process Scope - Delete Sheet 1" sap:VirtualizedContainerService.HintSize="723.2,765.6" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,656" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,567.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="Maximize" UseTemplate="True" WorkbookPath="[&quot;Data\Output\Yearly-Report-&quot; + in_Year.ToString() + &quot;-&quot; + in_TaxID+&quot;.xlsx&quot;]">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,251.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:RenameSheetX DisplayName="Rename Sheet" From="[Excel.sheet(&quot;Sheet1&quot;)]" sap:VirtualizedContainerService.HintSize="433.6,162.4" sap2010:WorkflowViewState.IdRef="RenameSheetX_1" To="[in_TaxID +&quot;_&quot; + in_Year.ToString]" />
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ueab:ExcelProcessScopeX>
   </Sequence>
 </Activity>

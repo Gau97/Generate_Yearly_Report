@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1135,2383</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>751.2,2873.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Upload_yearly_Report_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -91,19 +91,19 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Upload_yearly_Report" sap:VirtualizedContainerService.HintSize="688,2318" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Upload_yearly_Report" sap:VirtualizedContainerService.HintSize="688,2808.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe ACME'" sap:VirtualizedContainerService.HintSize="626,57" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="59f363e541bcc3194ca00ab1b34e25a8" Selector="&lt;html app='chrome.exe' title='ACME*Work Items' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe ACME'" sap:VirtualizedContainerService.HintSize="625.6,351.2" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="59f363e541bcc3194ca00ab1b34e25a8" Selector="&lt;html app='chrome.exe' title='*ACME*' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,172" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="VendorInformation" />
             </Sequence.Variables>
@@ -112,25 +112,25 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To - DashBoard Page" sap:VirtualizedContainerService.HintSize="354,83" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[in_UploadURL]" />
+            <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To - DashBoard Page" sap:VirtualizedContainerService.HintSize="353.6,83.2" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[in_UploadURL]" />
           </Sequence>
         </ActivityAction>
       </ui:BrowserScope.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:BrowserScope>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="626,124" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Navigated To Upload page.&quot;]" />
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe ACME'" sap:VirtualizedContainerService.HintSize="626,2049" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="03d815710b158e905be9a454f819a42d" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Upload Yearly Report' /&gt;">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="625.6,124.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Navigated To Upload page.&quot;]" />
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe ACME'" sap:VirtualizedContainerService.HintSize="625.6,2244" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="03d815710b158e905be9a454f819a42d" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Upload Yearly Report' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,1879" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,2073.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="UploadedSuccessFully" />
             </Sequence.Variables>
@@ -139,7 +139,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'vendor Tax ID'" EmptyField="True" sap:VirtualizedContainerService.HintSize="530,167" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[in_TaxID]">
+            <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'vendor Tax ID'" EmptyField="True" sap:VirtualizedContainerService.HintSize="529.6,167.2" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[in_TaxID]">
               <ui:TypeInto.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8ce10b11-dfbe-475b-a057-cd99e53097ce" InformativeScreenshot="f0643d301214a4c7c6d041f68ee63bcd" Selector="&lt;webctrl id='vendorTaxID' tag='INPUT' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -151,7 +151,7 @@
                 </ui:Target>
               </ui:TypeInto.Target>
             </ui:TypeInto>
-            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Items="{x:Null}" DisplayName="Select Item - Report Year" sap:VirtualizedContainerService.HintSize="530,167" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="[in_ReportYear]">
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Items="{x:Null}" DisplayName="Select Item - Report Year" sap:VirtualizedContainerService.HintSize="529.6,167.2" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="[in_ReportYear]">
               <ui:SelectItem.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f4cb5442-84ec-46ec-8d88-ed0c6bbb9d51" InformativeScreenshot="d6014c0d53dc11e27eaaad6e22a28afb" Selector="&lt;webctrl id='reportYear' tag='SELECT' class='selectpicker' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -163,7 +163,7 @@
                 </ui:Target>
               </ui:SelectItem.Target>
             </ui:SelectItem>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Select Report File'" sap:VirtualizedContainerService.HintSize="530,139" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="5000" DisplayName="Click 'Select Report File'" sap:VirtualizedContainerService.HintSize="529.6,139.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="False">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -175,29 +175,26 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1bd14f7-4dea-4efc-9258-dc421a3a6abc" InformativeScreenshot="57f6f5e0ae8926817703990f8b88bb1d" Selector="&lt;webctrl aaname='*Select Report*' tag='LABEL' visibleinnertext='Select Report File' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1bd14f7-4dea-4efc-9258-dc421a3a6abc" InformativeScreenshot="57f6f5e0ae8926817703990f8b88bb1d" Selector="&lt;webctrl tag='LABEL' class='btn btn-default' parentclass='controls' visibleinnertext='Select Report File' /&gt;" WaitForReady="INTERACTIVE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'Open Window - file Name'" sap:VirtualizedContainerService.HintSize="530,57" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="bb535b2f3c9b45ed5c3ed6550ab113c7" Selector="&lt;wnd app='chrome.exe' title='Open' /&gt;">
+            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'Open Window - file Name'" sap:VirtualizedContainerService.HintSize="529.6,56.8" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="bb535b2f3c9b45ed5c3ed6550ab113c7" Selector="&lt;wnd app='chrome.exe' title='Open' /&gt;">
               <ui:WindowScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,385" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,386.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'File Name'" sap:VirtualizedContainerService.HintSize="354,167" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[in_YearlyReportPath]">
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'File Name'" sap:VirtualizedContainerService.HintSize="353.6,167.2" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[in_YearlyReportPath]">
                       <ui:TypeInto.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ff93fbd1-81d9-4fd7-9ea2-90f69ceb7277" InformativeScreenshot="a90ff2ab1f2a988d2e18ce0ae37ecce4" Selector="&lt;wnd aaname='File name:' cls='Edit' /&gt;">
                           <ui:Target.TimeoutMS>
@@ -209,7 +206,7 @@
                         </ui:Target>
                       </ui:TypeInto.Target>
                     </ui:TypeInto>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Open'" sap:VirtualizedContainerService.HintSize="354,130" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Open'" sap:VirtualizedContainerService.HintSize="353.6,130.4" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -241,7 +238,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:WindowScope>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="25000" DisplayName="Click 'Upload Report'" sap:VirtualizedContainerService.HintSize="530,139" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="25000" DisplayName="Click 'Upload Report'" sap:VirtualizedContainerService.HintSize="529.6,139.2" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="False">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -253,7 +250,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cb00d8af-ae6a-45fc-8239-fe0b3240ff85" InformativeScreenshot="06f94dff058485763dc0459623027269" Selector="&lt;webctrl id='buttonUpload' tag='BUTTON' aaname='Upload Report' type='button' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cb00d8af-ae6a-45fc-8239-fe0b3240ff85" InformativeScreenshot="06f94dff058485763dc0459623027269" Selector="&lt;webctrl parentid='searchForm' type='button' visibleinnertext='Upload Report' aaname='Upload Report' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -263,7 +260,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:UiElementExists DisplayName="Element Exists 'Chrome_RenderWidgetHost...'" Exists="[UploadedSuccessFully]" sap:VirtualizedContainerService.HintSize="530,139" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+            <ui:UiElementExists DisplayName="Element Exists 'Chrome_RenderWidgetHost...'" Exists="[UploadedSuccessFully]" sap:VirtualizedContainerService.HintSize="529.6,139.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
               <ui:UiElementExists.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5a9d5fbb-e1e2-4b1c-be48-7f9763a66166" InformativeScreenshot="d159d76dd70feb076b6e9c2801ee5dfe" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Upload Yearly Report - Google Chrome' /&gt;&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl role='pane' idx='2' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -275,9 +272,9 @@
                 </ui:Target>
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
-            <If Condition="[UploadedSuccessFully]" sap:VirtualizedContainerService.HintSize="530,983" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[UploadedSuccessFully]" sap:VirtualizedContainerService.HintSize="529.6,1176" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,719" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,909.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="FileUploadConfirmationID" />
                   </Sequence.Variables>
@@ -286,7 +283,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'text Report'" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="GetValue_1">
+                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'text Report'" sap:VirtualizedContainerService.HintSize="433.6,139.2" sap2010:WorkflowViewState.IdRef="GetValue_1">
                     <ui:GetValue.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="29f4a2a4-754a-4dc9-85c4-a9410f755783" InformativeScreenshot="648a45948ad5a67aefc6356cf89bb826" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Upload Yearly Report - Google Chrome' /&gt;&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='Report was uploaded*' role='text' /&gt;">
                         <ui:Target.TimeoutMS>
@@ -301,8 +298,8 @@
                       <OutArgument x:TypeArguments="x:String">[FileUploadConfirmationID]</OutArgument>
                     </ui:GetValue.Value>
                   </ui:GetValue>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,124" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[FileUploadConfirmationID]" />
-                  <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,124.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[FileUploadConfirmationID]" />
+                  <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[out_UploadId]</OutArgument>
                     </Assign.To>
@@ -310,8 +307,30 @@
                       <InArgument x:TypeArguments="x:String">[FileUploadConfirmationID.Substring("Report was uploaded - Cionfirmation id is ".Length)]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,124" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;File Uploaded Successfully for Tax ID - &quot; +in_TaxID + &quot;.&quot;]" />
-                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="434,130" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,124.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;File Uploaded Successfully for Tax ID - &quot; +in_TaxID + &quot;.&quot;]" />
+                  <ui:ClickImage DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click Image 'chrome.exe ACME'" sap:VirtualizedContainerService.HintSize="433.6,188" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:ClickImage.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:ClickImage.CursorPosition>
+                    <ui:ClickImage.Image>
+                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.4" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="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" />
+                    </ui:ClickImage.Image>
+                    <ui:ClickImage.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7af25013-a09b-4fff-9ec5-dd87bf0801e7" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Download Monthly Report - Google Chrome' /&gt;" WaitForReady="INTERACTIVE">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                      </ui:Target>
+                    </ui:ClickImage.Target>
+                  </ui:ClickImage>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="433.6,130.4" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                     <ui:Click.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -333,7 +352,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
